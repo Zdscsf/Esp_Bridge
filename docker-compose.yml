@@ -6,6 +6,6 @@ services:
     container_name: esp_bridge
     restart: unless-stopped
     privileged: true
+    user: root
     devices:
       - /dev/ttyS0:/dev/ttyS0
-    working_dir: /app
