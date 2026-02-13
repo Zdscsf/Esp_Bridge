@@ -12,7 +12,7 @@ else:
 
 print(f"Démarrage bridge sur {port}...")
 
-ser = serial.Serial(port, 115200, timeout=1)
+ser = serial.Serial("/dev/ttyS0", 115200, timeout=1)
 print("Bridge actif")
 
 while True:
@@ -28,3 +28,4 @@ while True:
     ser.write(b"LED_OFF\n")
     print("Envoyé LED_OFF")
     time.sleep(5)
+
