@@ -12,8 +12,9 @@ while True:
 
     ser.write(b"LED_ON\n")
     print("Envoyé LED_ON", flush=True)
-    time.sleep(5)
+    time.sleep(1)
 
     ser.write(b"LED_OFF\n")
     print("Envoyé LED_OFF", flush=True)
-    time.sleep(5)
+    time.sleep(1)
+
