@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  esp_bridge:
+    build: .
+    container_name: esp_bridge
+    restart: unless-stopped
+    privileged: true
+    devices:
+      - /dev/serial0:/dev/serial0
+      - /dev/ttyAMA0:/dev/ttyAMA0
