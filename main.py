@@ -18,13 +18,14 @@ while True:
     try:
         ser.write(b"LED_ON\n")
         print("Envoyé LED_ON", flush=True)
-        time.sleep(0.1)
+        time.sleep(0.25)
 
         ser.write(b"LED_OFF\n")
         print("Envoyé LED_OFF", flush=True)
-        time.sleep(0.1)
+        time.sleep(0.25)
     except Exception as e:
         print("Erreur écriture:", e, flush=True)
+
 
 
 
