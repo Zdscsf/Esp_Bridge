@@ -8,5 +8,4 @@ services:
     privileged: true
     devices:
       - /dev/ttyS0:/dev/ttyS0
-
-
+    working_dir: /app
