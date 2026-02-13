@@ -1,20 +1,15 @@
-import serial
 import time
 import sys
 
-ser = serial.Serial("/dev/ttyS0", 115200, timeout=1)
 print("Bridge actif", flush=True)
 
 while True:
-    if ser.in_waiting:
-        line = ser.readline().decode().strip()
-        print("Reçu:", line, flush=True)
-
-    ser.write(b"LED_ON\n")
-    print("Envoyé LED_ON", flush=True)
-    time.sleep(1)
-
-    ser.write(b"LED_OFF\n")
-    print("Envoyé LED_OFF", flush=True)
-    time.sleep(1)
-
+    try:
+        # Simulation d'envoi LED_ON / LED_OFF
+        print("Envoyé LED_ON", flush=True)
+        time.sleep(2)
+        print("Envoyé LED_OFF", flush=True)
+        time.sleep(2)
+    except KeyboardInterrupt:
+        print("Arrêt du bridge", flush=True)
+        break
